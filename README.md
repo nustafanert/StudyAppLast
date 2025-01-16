@@ -10,6 +10,9 @@
 - **Soru Takibi:** Öğrenciler hangi derslerden kaç soru çözdüklerini kaydedebilirler.  
 - **Çalışma Süresi İzleme:** Günlük ortalama çalışma süresi ve ilerlemeleri görüntülenebilir.  
 - **Düzenli Çalışma Teşviki:** Kullanıcıların düzenli çalışma alışkanlıkları kazanmalarına yardımcı olur.
+- **Sınavlara Kalan Süre:** Sınavlara kalan süreleri takip etmelerine olanak sağlar.
+- **Grafik Takibi:** Öğrencilerin girdiği verilere göre onlara bir grafik sunarak çalışmalarını takip etmelerine olanak sağlar.
+- **Yapılacaklar Listesi:** Öğrencilerin düzenli olarak yapmak isteyeceği notları bu listeye not olarak yazmasına olanak sağlar.
 
 ---
 
@@ -21,11 +24,5 @@
 
 ## 🧑‍💻 Teknolojiler  
 - **Platform:** Android  
-- **Kullanılan Teknolojiler:** Java, Kotlin, Firebase
+- **Kullanılan Teknolojiler:** Java, XML, Firebase
 
----
-
-## 🛠 Kurulum  
-Bu uygulamayı çalıştırmak için, Android Studio kullanarak uygulamanın kaynak kodlarını bilgisayarınıza indirip derleyebilirsiniz. Aşağıdaki komutla uygulamanın kaynak kodlarını GitHub'dan klonlayabilirsiniz:
-```bash
-git clone https://github.com/[username]/ders-takip-app.git
