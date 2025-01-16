@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="Theme.DersApp" parent="Theme.AppCompat.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+        <item name="colorPrimary">@color/white1</item>
+        <item name="colorPrimaryVariant">@color/theme6color2</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <!-- Secondary brand color. -->
+        <item name="colorSecondary">@color/theme6color2</item>
+        <item name="colorSecondaryVariant">@color/theme6color1</item>
+        <item name="colorOnSecondary">@color/white1</item>
+        <!-- Status bar color. -->
+        <item name="android:statusBarColor" tools:targetApi="l">@color/theme6color6</item>
+        <item name="android:navigationBarColor" tools:targetApi="l">@color/theme6color6</item>
+        <!-- Customize your theme here. -->
+        <item name="fontFamily"> @font/a1</item>
+    </style>
+</resources>

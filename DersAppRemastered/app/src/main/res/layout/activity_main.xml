@@ -1,0 +1,521 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme6color6"
+    android:screenOrientation="portrait"
+    tools:context=".MainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <RelativeLayout
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:id="@+id/main_tarih"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/text1"
+                        android:textSize="20dp"
+                        android:textAlignment="center"
+                        android:text="15.06.2023"
+                        android:layout_marginBottom="10dp"/>
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/red"
+                        android:textSize="30dp"
+                        android:text="@string/app_name"
+                        android:textAlignment="center"/>
+
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:drawableLeft="@drawable/bar_chart"
+                        android:onClick="VerileriAcBtnView"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn1"
+                        android:text="VERİ GRAFİĞİ"
+                        android:textSize="25dp"
+                        android:textColor="@color/white1"
+                        android:textStyle="bold"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:onClick="YapılacaklarListesiAcBtnView"
+                        android:drawableLeft="@drawable/note_durum"
+                        android:layout_marginTop="15dp"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn1"
+                        android:text="Yapılacaklar Listesi"
+                        android:textColor="@color/white1"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:onClick="DurumuGoruntuleBtnView"
+                        android:drawableLeft="@drawable/durum"
+                        android:layout_marginTop="15dp"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn1"
+                        android:text="DURUMU GÖRÜNTÜLE"
+                        android:textColor="@color/white1"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+                    <androidx.appcompat.widget.AppCompatButton
+                        android:onClick="SinavSayacBtnView"
+                        android:drawableLeft="@drawable/ic_timer"
+                        android:layout_marginTop="15dp"
+                        android:padding="15dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@drawable/bg_btn1"
+                        android:text="SINAV SAYAÇ"
+                        android:textColor="@color/white1"
+                        android:textSize="25dp"
+                        android:textStyle="bold"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"/>
+                    <LinearLayout
+                        android:onClick="DersCalisBtn"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginLeft="20dp"
+                        android:padding="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:background="@drawable/bg_btn2"
+                        android:orientation="horizontal">
+                        <ImageView
+                            android:onClick="DersCalisBtn"
+                            android:layout_width="70dp"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/calisma" />
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:onClick="DersCalisBtn"
+                            android:layout_width="match_parent"
+                            android:background="@null"
+                            android:layout_height="match_parent"
+                            android:textColor="@color/white2"
+                            android:textStyle="bold"
+                            android:text="DERS ÇALIŞ"
+                            android:textSize="30dp"
+                            android:layout_marginLeft="20dp"
+                            android:layout_marginRight="20dp" />
+
+                    </LinearLayout>
+
+                    <RelativeLayout
+                        android:layout_marginLeft="25dp"
+                        android:layout_marginRight="25dp"
+                        android:layout_marginBottom="50dp"
+                        android:layout_marginTop="50dp"
+                        android:layout_alignParentBottom="true"
+                        android:layout_width="match_parent"
+                        android:padding="15dp"
+                        android:background="@drawable/bg_arka2"
+                        android:layout_height="wrap_content">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:id="@+id/main_hedefler"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="vertical">
+                                <TextView
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white1"
+                                    android:textSize="28dp"
+                                    android:textAlignment="center"
+                                    android:text="GÜNLÜK HEDEF"/>
+
+                                <LinearLayout
+                                    android:layout_marginTop="5dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+                                    <TextView
+                                        android:id="@+id/main_text_hedefSure"
+                                        android:layout_weight="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white1"
+                                        android:textSize="27dp"
+                                        android:textAlignment="center"
+                                        android:text="0 dk"/>
+                                    <TextView
+                                        android:id="@+id/main_text_hedefSoru"
+                                        android:layout_weight="2"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/white1"
+                                        android:textSize="27dp"
+                                        android:textAlignment="center"
+                                        android:text="0 Soru"/>
+                                </LinearLayout>
+                                <View
+                                    android:layout_marginTop="10dp"
+                                    android:layout_marginBottom="10dp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="2dp"
+                                    android:background="@color/white1"/>
+
+                            </LinearLayout>
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white1"
+                                android:textSize="28dp"
+                                android:textAlignment="center"
+                                android:text="Bugün"/>
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/main_text_bugunCalisilanSure"
+                                    android:layout_weight="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white1"
+                                    android:textSize="27dp"
+                                    android:textAlignment="center"
+                                    android:text="0 dk"/>
+                                <TextView
+                                    android:id="@+id/main_text_bugunCozulenSoru"
+                                    android:layout_weight="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white1"
+                                    android:textSize="27dp"
+                                    android:textAlignment="center"
+                                    android:text="0 Soru"/>
+                            </LinearLayout>
+                            <View
+                                android:layout_marginTop="10dp"
+                                android:layout_marginBottom="10dp"
+                                android:layout_width="match_parent"
+                                android:layout_height="2dp"
+                                android:background="@color/white1"/>
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textColor="@color/white1"
+                                android:textSize="28dp"
+                                android:textAlignment="center"
+                                android:text="Tüm Zamanlar"/>
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal">
+                                <TextView
+                                    android:id="@+id/main_text_tümZamanCalisilanSure"
+                                    android:layout_weight="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white1"
+                                    android:textSize="27dp"
+                                    android:textAlignment="center"
+                                    android:text="0 dk"/>
+                                <TextView
+                                    android:id="@+id/main_text_tümZamanCozulenSoru"
+                                    android:layout_weight="2"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/white1"
+                                    android:textSize="27dp"
+                                    android:textAlignment="center"
+                                    android:text="0 Soru"/>
+                            </LinearLayout>
+
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                    <TextView
+                        android:layout_alignParentBottom="true"
+                        android:background="#B2979797"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="15dp"
+                        android:padding="5dp"
+                        android:text="Developed by Mustafa Mert Altınsoy"
+                        android:textAlignment="center"
+                        android:textColor="#D3FFFFFF"
+                        android:textSize="19sp"
+                        android:textStyle="italic" />
+
+
+                </LinearLayout>
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <ImageButton
+                    android:id="@+id/main_ayarlar"
+                    android:layout_width="60dp"
+                    android:layout_height="60dp"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginBottom="1dp"
+                    android:background="@drawable/settings"
+                    android:backgroundTint="@color/blackandwhite"
+                    android:onClick="AyarlarAc" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:text="Ayarlar"
+                    android:textSize="15dp"
+                    android:layout_marginBottom="10dp"
+                    android:textColor="@color/blackandwhite" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <ScrollView
+                    android:layout_weight="2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:fillViewport="true">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@drawable/bg_arka"
+                        android:backgroundTint="@color/theme6color1"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_margin="10dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="30sp"
+                            android:text="Hızlı Menü"
+                            android:textColor="@color/white1"
+                            android:gravity="center"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="2dp"
+                            android:background="@color/white1"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:onClick="HedefEkranAc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/bg_btn"
+                            android:backgroundTint="#FFCCB8"
+                            android:text="Hedefleri Değiştir"
+                            android:textSize="28sp"
+                            android:textColor="@color/white1"
+                            android:padding="10dp"/>
+
+                        <CheckBox
+                            android:id="@+id/ayarlar_yapılacaklarListesiAyar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textAlignment="center"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/bg_btn"
+                            android:backgroundTint="#FFCCB8"
+                            android:text="Yapılacaklar listesi\nher gün yenilensin mi?"
+                            android:textColor="@color/white1"
+                            android:buttonTint="@color/white1"
+                            android:textSize="28sp"
+                            android:padding="10dp"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:onClick="HedefEkranAc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/bg_btn"
+                            android:backgroundTint="#FFCCB8"
+                            android:text="Üniversite Sınavına Kalan Süre İçin Tıkla"
+                            android:textAllCaps="false"
+                            android:textSize="28sp"
+                            android:textColor="@color/white1"
+                            android:padding="10dp"/>
+
+                        <androidx.appcompat.widget.AppCompatButton
+                            android:onClick="HedefEkranAc"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_margin="15dp"
+                            android:background="@drawable/bg_btn"
+                            android:backgroundTint="#FA9595"
+                            android:text="Geri"
+                            android:textAllCaps="false"
+                            android:textSize="28sp"
+                            android:textColor="@color/white1"
+                            android:padding="10dp"/>
+
+                        <View
+                            android:layout_width="match_parent"
+                            android:layout_height="700dp"/>
+
+
+                    </LinearLayout>
+
+                </ScrollView>
+
+                <RelativeLayout
+                    android:layout_weight="3"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="@color/transparent">
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/geriBildirimGonderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/theme6color6"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GERİ BİLDİRİM GÖNDER"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/white1"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uygulamada istediğiniz güncellemeler ve yenilikleri veya yaşadığınız hataları aşağıdaki kutucuğa yazınız."
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-12dp"/>
+            <EditText
+                android:id="@+id/geriBildirimEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_arka3"
+                android:hint="Geri Bildirimi Yazınız..."
+                android:textSize="25sp"
+                android:padding="15dp"/>
+
+            <EditText
+                android:id="@+id/geriBildirimMailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_arka3"
+                android:hint="E-mail adresinizi yazınız"
+                android:textSize="25sp"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"/>
+
+            <EditText
+                android:id="@+id/geriBildiriminstagramEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_arka3"
+                android:hint="İletişim için Instagram veya telefon numarası bırakabilirsiniz (Zorunlu değil)"
+                android:textSize="25sp"
+                android:padding="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detaylı bilgi için\nInstagram : @mustafamert.altinsoy\nMail : untygames@gmail.com"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="10dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/geriBildirimGonderBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:background="@drawable/bg_btn6"
+                android:text="GÖNDER"
+                android:maxLength="500"
+                android:textColor="@color/white1"
+                android:textSize="30sp"
+                android:padding="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/geriBildirimGeriBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="40dp"
+                android:layout_marginTop="0dp"
+                android:layout_marginLeft="40dp"
+                android:layout_marginRight="40dp"
+                android:background="@drawable/bg_btn2"
+                android:text="Ana sayfaya dön"
+                android:maxLength="500"
+                android:textColor="@color/white1"
+                android:textSize="30sp"
+                android:padding="10dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+</RelativeLayout>

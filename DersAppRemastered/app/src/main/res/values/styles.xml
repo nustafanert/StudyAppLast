@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <style name="SwitchAyniRenk" parent="Theme.AppCompat.DayNight.NoActionBar">
+
+        <!-- active thumb & track color (30% transparency) -->
+        <item name="colorControlActivated">@color/theme6color2</item>
+
+        <item name="colorSwitchThumbNormal">@color/theme6color2</item>
+
+        <item name="android:colorForeground">#95ACA6A6</item>
+    </style>
+
+    <style name="spinnerDropDownItemStyle" parent="android:TextAppearance.Widget.TextView.SpinnerItem"/>
+
+    <style name="CustomFont">
+        <item name="android:fontFamily">@font/poppins</item>
+        <item name="android:textColor">@color/theme6color6</item>
+    </style>
+
+</resources>

@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "893603840480",
+    "project_id": "dersapp-ce4e4",
+    "storage_bucket": "dersapp-ce4e4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:893603840480:android:201719c08ebd788bba2b85",
+        "android_client_info": {
+          "package_name": "com.untygames.dersapp"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "893603840480-87tm7m8cl9sje1op3jsfu5c587un1ge2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBG8TAw25TJPzIF9_Pfrs2cq4f98RbeaxY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "893603840480-87tm7m8cl9sje1op3jsfu5c587un1ge2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

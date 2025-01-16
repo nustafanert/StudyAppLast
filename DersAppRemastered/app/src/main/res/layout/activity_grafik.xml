@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme6color6"
+    android:padding="10dp"
+    tools:context=".GrafikActivity">
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:visibility="visible"
+        android:background="@color/theme6color6"
+        android:id="@+id/barChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="50dp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:visibility="gone"
+        android:background="@color/theme6color6"
+        android:id="@+id/lineChart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="30dp"
+        android:layout_marginBottom="30dp" />
+
+
+    <TextView
+        android:id="@+id/activeAyView"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:textColor="@color/white1"
+        android:text="OCAK 2023"/>
+
+    <Button
+        android:onClick="SonrakiBtnView"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sonraki"/>
+
+    <Button
+        android:onClick="OncekiBtnView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Önceki"/>
+
+    <Button
+        android:onClick="MenuyeDonBtnView"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Menü"/>
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toLeftOf="@id/graphRadioGroup"
+        android:layout_toRightOf="@id/activeAyView"
+        android:layout_alignTop="@id/graphRadioGroup"
+        android:layout_alignBottom="@id/graphRadioGroup"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/grafik_spinner" />
+
+    <RadioGroup
+        android:id="@+id/graphRadioGroup"
+        android:layout_gravity="center"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <RadioButton
+            android:checked="true"
+            android:id="@+id/graphRadioSutun"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Sütun"/>
+        <RadioButton
+            android:id="@+id/graphRadioCizgi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Çizgi"/>
+    </RadioGroup>
+
+</RelativeLayout>

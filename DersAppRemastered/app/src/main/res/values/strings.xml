@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Ders Takip</string>
+    <string name="payment_yearly">500TL</string>
+    <string name="payment_montly">60TL</string>
+    <string name="payment_destek">25TL</string>
+
+</resources>

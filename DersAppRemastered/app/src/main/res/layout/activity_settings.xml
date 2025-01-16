@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme6color6"
+    tools:context=".ActivitySettings">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_margin="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="30sp"
+                    android:text="AYARLAR"
+                    android:textColor="@color/white2"
+                    android:gravity="center"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/white2"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:onClick="HedefEkranAc"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn1"
+                    android:text="HEDEFLERİ DEĞİŞTİR"
+                    android:textSize="28sp"
+                    android:textAlignment="center"
+                    android:textColor="@color/white1"
+                    android:padding="10dp"/>
+
+
+                <CheckBox
+                    android:id="@+id/ayarlar_yapılacaklarListesiAyar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn1"
+                    android:text="Yapılacaklar listesi\nher gün yenilensin mi?"
+                    android:textColor="@color/white1"
+                    android:buttonTint="@color/white1"
+                    android:textSize="28sp"
+                    android:padding="10dp"/>
+
+                <CheckBox
+                    android:id="@+id/ayarlar_yuzdeGosterAyar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn1"
+                    android:text="Notlar bölümünde 'Yapılacaklar Yüzdesini' göstersin mi?"
+                    android:textColor="@color/white1"
+                    android:buttonTint="@color/white1"
+                    android:textSize="28sp"
+                    android:padding="10dp"/>
+                <CheckBox
+                    android:id="@+id/ayarlar_themeChangeAyar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textAlignment="center"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn1"
+                    android:text="Karanlık Mod"
+                    android:textColor="@color/white1"
+                    android:buttonTint="@color/white1"
+                    android:textSize="28sp"
+                    android:padding="10dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ayarlar_btnremoveads"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn1"
+                    android:drawableLeft="@drawable/im_happy"
+                    android:text="Geliştiriciye Destek Ol"
+                    android:textSize="28sp"
+                    android:textColor="@color/white1"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:padding="10dp"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/ayarlar_geriBildirimBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="20dp"
+                    android:background="@drawable/bg_btn1"
+                    android:drawableLeft="@drawable/feedback"
+                    android:text="Geri Bildirim Gönder"
+                    android:textSize="28sp"
+                    android:textColor="@color/white1"
+                    android:textAlignment="center"
+                    android:textAllCaps="false"
+                    android:padding="10dp"/>
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Version : "
+                    android:textSize="20dp"
+                    android:textAlignment="center"/>
+
+                <TextView
+                    android:visibility="gone"
+                    android:layout_margin="10dp"
+                    android:id="@+id/premiumText"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Premium Kullanıcı : Aktif"
+                    android:textSize="20dp"
+                    android:textAlignment="center"/>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:onClick="AyarlarKapat"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="40dp"
+                    android:background="@drawable/bg_btn2"
+                    android:text="GERİ DÖN"
+                    android:textColor="@color/white1"
+                    android:textSize="30sp"
+                    android:padding="10dp"/>
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+
+    <ScrollView
+        android:visibility="gone"
+        android:id="@+id/geriBildirimGonderView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:background="@color/theme6color6"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="GERİ BİLDİRİM GÖNDER"
+                android:textSize="30sp"
+                android:textAlignment="center"
+                android:textColor="@color/white2"
+                android:layout_marginTop="20dp"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Uygulamada istediğiniz güncellemeler ve yenilikleri veya yaşadığınız hataları aşağıdaki kutucuğa yazınız."
+                android:textSize="22sp"
+                android:textAlignment="center"
+                android:layout_marginTop="40dp"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginBottom="-12dp"/>
+            <EditText
+                android:id="@+id/geriBildirimEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_arka3"
+                android:hint="Geri Bildirimi Yazınız..."
+                android:textSize="25sp"
+                android:padding="15dp"/>
+
+            <EditText
+                android:id="@+id/geriBildirimMailEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_arka3"
+                android:hint="E-mail adresinizi yazınız"
+                android:textSize="25sp"
+                android:inputType="textEmailAddress"
+                android:padding="15dp"/>
+
+            <EditText
+                android:id="@+id/geriBildiriminstagramEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp"
+                android:background="@drawable/bg_arka3"
+                android:hint="İletişim için Instagram veya telefon numarası bırakabilirsiniz (Zorunlu değil)"
+                android:textSize="25sp"
+                android:padding="15dp"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Detaylı bilgi için\nInstagram : @mustafamert.altinsoy\nMail : untygames@gmail.com"
+                android:textSize="20sp"
+                android:textAlignment="center"
+                android:layout_marginTop="-5dp"
+                android:layout_marginBottom="10dp"/>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/geriBildirimGonderBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:background="@drawable/bg_btn6"
+                android:text="GÖNDER"
+                android:maxLength="500"
+                android:textColor="@color/white1"
+                android:textSize="30sp"
+                android:padding="10dp"/>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/geriBildirimGeriBtn"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="40dp"
+                android:background="@drawable/bg_btn2"
+                android:text="GERİ DÖN"
+                android:maxLength="500"
+                android:textColor="@color/white1"
+                android:textSize="30sp"
+                android:padding="10dp"/>
+
+
+        </LinearLayout>
+    </ScrollView>
+
+    <RelativeLayout
+        android:id="@+id/settings_progressBarRL"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#C91B1B1B">
+
+        <ProgressBar
+            android:layout_centerInParent="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

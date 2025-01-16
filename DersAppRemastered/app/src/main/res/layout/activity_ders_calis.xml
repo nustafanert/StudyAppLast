@@ -1,0 +1,1422 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme6color6"
+    android:screenOrientation="portrait"
+    tools:context=".ActivityDersCalis">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:text="DERS ÇALIŞ"
+                android:textAlignment="center"
+                android:textColor="@color/text1"
+                android:layout_marginBottom="20dp"
+                android:gravity="center"
+                android:textSize="45dp" />
+
+            <TextView
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginBottom="10dp"
+                android:id="@+id/sozlerTextView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="-M.Kemal Atatürk"
+                android:textAlignment="center"
+                android:textColor="@color/text1"
+                android:gravity="center"
+                android:textSize="20sp" />
+
+
+            <RelativeLayout
+                android:layout_margin="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:layout_gravity="center"
+                android:padding="16dp"
+                android:background="@drawable/bg_arka"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toLeftOf="@id/dersCalis_switchCompat"
+                    android:text="Kronometre"
+                    android:textAlignment="center"
+                    android:textColor="@color/text1"
+                    android:textSize="21dp" />
+
+                <androidx.appcompat.widget.SwitchCompat
+                    android:id="@+id/dersCalis_switchCompat"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:checked="false"
+                    android:theme="@style/SwitchAyniRenk" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="15dp"
+                    android:layout_toRightOf="@id/dersCalis_switchCompat"
+                    android:text="Sayaç"
+                    android:textAlignment="center"
+                    android:textColor="@color/text1"
+                    android:textSize="21dp" />
+
+
+            </RelativeLayout>
+
+            <TextView
+                android:visibility="gone"
+                android:id="@+id/durdurulduText"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textColor="@color/white2"
+                android:text="Durduruldu!"
+                android:textSize="30dp"
+                android:textAlignment="center"/>
+
+            <RelativeLayout
+                android:layout_margin="20dp"
+                android:visibility="visible"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:visibility="gone"
+                    android:id="@+id/dersCalis_GeriSayimView"
+                    android:layout_width="match_parent"
+                    android:layout_marginBottom="40dp"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <RelativeLayout
+                            android:layout_above="@id/dersCalisProgressView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center">
+                            <CheckBox
+                                android:id="@+id/dersCalis_GeriSayimTitretCheckBox"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Bittiğinde Titret"
+                                android:textColor="@color/text1"
+                                android:textSize="25dp"
+                                android:checked="true" />
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/dersCalisProgressView"
+                            android:background="@drawable/bg_btn1"
+                            android:backgroundTint="@color/theme6color6"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <ProgressBar
+                                android:id="@+id/dersCalis_GeriSayimProgress"
+                                style="?android:attr/progressBarStyleHorizontal"
+                                android:layout_width="300dp"
+                                android:layout_height="300dp"
+                                android:layout_centerInParent="true"
+                                android:background="@drawable/circle_green"
+                                android:indeterminate="false"
+                                android:max="1000"
+                                android:progress="0"
+                                android:progressDrawable="@drawable/circle_red"
+                                android:rotation="-90"
+                                android:scaleX="0.9"
+                                android:scaleY="0.9" />
+
+                            <TextView
+                                android:id="@+id/dersCalis_GeriSayimText"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:layout_gravity="center"
+                                android:padding="4dp"
+                                android:text="120:00"
+                                android:textAlignment="center"
+                                android:textColor="@color/text1"
+                                android:textSize="45sp"
+                                android:textStyle="bold" />
+
+                        </RelativeLayout>
+
+                    </LinearLayout>
+
+
+                </RelativeLayout>
+
+                <!--
+                <Chronometer
+                    android:visibility="gone"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="70dp"
+                    android:padding="16dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_btn6"
+                    android:id="@+id/sayac"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="60sp"/> -->
+                <Chronometer
+                    android:visibility="visible"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginRight="15dp"
+                    android:layout_marginBottom="70dp"
+                    android:padding="16dp"
+                    android:layout_gravity="center"
+                    android:background="@drawable/bg_btn6"
+                    android:id="@+id/cronometer"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:textAlignment="center"
+                    android:textColor="@color/white1"
+                    android:textStyle="bold"
+                    android:textSize="60sp"/>
+
+
+
+            </RelativeLayout>
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDersCalisDuraklatDevamEt"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="30dp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_btn1"
+                android:padding="12dp"
+                android:text="Duraklat"
+                android:textColor="@color/white1"
+                android:textSize="30dp" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btnDersCalisBitir"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="25dp"
+                android:layout_marginRight="20dp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_btn7"
+                android:padding="12dp"
+                android:text="Bitir / Kaydet"
+                android:textColor="@color/white1"
+                android:textSize="30dp" />
+
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/dersCalis_kaydetmedenCikBtn"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="50dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginRight="50dp"
+                android:layout_marginBottom="50dp"
+                android:layout_weight="2"
+                android:background="@drawable/bg_btn2"
+                android:padding="12dp"
+                android:text="Kaydetmeden Çık"
+                android:textColor="@color/white1"
+                android:textSize="25dp" />
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+
+    <ScrollView
+        android:id="@+id/btnDersCalisBitirEkranı"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme6color6"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_margin="5dp">
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Çalıştığın Süre"
+                    android:textAlignment="center"
+                    android:textColor="@color/white2"
+                    android:textSize="27dp"/>
+
+                <TextView
+                    android:id="@+id/dersCalis_calisilan_sure"
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0dk"
+                    android:textAlignment="center"
+                    android:textColor="@color/white2"
+                    android:textStyle="bold"
+                    android:textSize="40dp"/>
+
+                <View
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white2"/>
+
+                <TextView
+                    android:padding="10dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Çalıştığın Derslere Göre\nSoru Sayılarını Gir"
+                    android:textAlignment="center"
+                    android:textColor="@color/white2"
+                    android:textSize="25dp"/>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_mat_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/text2"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Matematik"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_mat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40sp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_edb_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Türk Dili ve Edebiyatı"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_edb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_fizik_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Fizik"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_fizik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_kimya_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Kimya"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_kimya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_biyoloji_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Biyoloji"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_biyoloji"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_tarih_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Tarih"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_tarih"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_ingilizce_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="İngilizce"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_ingilizce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_DinKültürüveAhlakBilgisi_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Din Kültürü ve Ahlak Bilgisi"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_DinKültürüveAhlakBilgisi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_cografya_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Coğrafya"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_cografya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_almanca_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Almanca"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_almanca"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_SağlıkBilgisi_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Sağlık Bilgisi"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_SağlıkBilgisi"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:text=""
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_Diğer1_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Diğer 1"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_Diğer1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:text=""
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_Diğer2_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Diğer 2"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_Diğer2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:text=""
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_aytmat_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="AYT Matematik"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_aytmat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_aytedb_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="AYT Edebiyat"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_aytedb"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_aytfizik_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="AYT Fizik"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_aytfizik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_aytkimya_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="AYT Kimya"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_aytkimya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_aytbiyo_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="AYT Biyoloji"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_aytbiyo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_tytmat_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TYT Matematik"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_tytmat"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_tytturkce_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TYT Türkçe"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_tytturkce"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_tytfizik_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TYT Fizik"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_tytfizik"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_tytkimya_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TYT Kimya"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_tytkimya"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_tytbiyo_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="TYT Biyoloji"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_tytbiyo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_geo_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Geometri"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_geo"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_paragraf_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Paragraf"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_paragraf"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+                <LinearLayout
+                    android:id="@+id/dersCalis_calisilan_ders_problem_ekran"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:textColor="@color/text2"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Problem"
+                        android:textSize="30dp" />
+
+                    <EditText
+                        android:id="@+id/dersCalis_calisilan_ders_problem"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:inputType="number"
+                        android:maxLength="4"
+                        android:hint="0"
+                        android:textColorHint="@color/text_hint"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textSize="40dp" />
+
+                </LinearLayout>
+
+
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDersCalis_devam"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn2"
+                    android:textSize="30dp"
+                    android:textColor="@color/white"
+                    android:padding="10dp"
+                    android:text="Devam"/>
+
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+    <ScrollView
+        android:id="@+id/dersCalis_sonucYuzdeliklerEkran"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/theme6color6"
+        android:fillViewport="true">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Çözdüğün Soru Sayısı"
+                    android:textSize="30dp"
+                    android:textColor="@color/white2"
+                    android:textAlignment="center"
+                    android:layout_marginBottom="5dp"/>
+
+                <TextView
+                    android:id="@+id/dersCalis_cozulenSoruSay"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginBottom="30dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="0 Soru"
+                    android:textSize="30dp"
+                    android:textColor="@color/text1"
+                    android:textAlignment="center"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/white1"/>
+
+                <LinearLayout
+                    android:id="@+id/hedefGunlukDakikaLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Günlük Çalışılan Dakika"
+                        android:textSize="30dp"
+                        android:textColor="@color/white2"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"/>
+                    <ProgressBar
+                        android:id="@+id/dersCalis_progress_calisilanSaat"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/style_horizontal_progressbar"/>
+
+                    <TextView
+                        android:id="@+id/dersCalis_progress_text_calisilanSaat"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewEnd"
+                        android:text="HATA!"
+                        android:textColor="@color/white2"
+                        android:textSize="25dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/hedefGunlukSoruLinear"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_margin="20dp">
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Günlük Çözülen Soru Sayısı"
+                        android:textSize="30dp"
+                        android:textColor="@color/white2"
+                        android:textAlignment="center"
+                        android:layout_marginBottom="5dp"/>
+                    <ProgressBar
+                        android:id="@+id/dersCalis_progress_cozulenSoruSayisi"
+                        android:layout_width="match_parent"
+                        android:layout_height="25dp"
+                        android:layout_centerInParent="true"
+                        style="?android:attr/progressBarStyleHorizontal"
+                        android:progressDrawable="@drawable/style_horizontal_progressbar"/>
+
+                    <TextView
+                        android:id="@+id/dersCalis_progress_text_cozulenSoruSayisi"
+                        android:layout_marginTop="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textAlignment="viewEnd"
+                        android:text="HATA! soru çözüldü."
+                        android:textColor="@color/white2"
+                        android:textSize="25dp"/>
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_margin="5dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn1"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Notlar"
+                        android:textColor="@color/white1"
+                        android:textAlignment="center"
+                        android:textSize="30sp"/>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:layout_marginBottom="5dp"
+                        android:background="@color/white2"/>
+
+                    <EditText
+                        android:id="@+id/dersCalis_sonuc_GünNotEdit"
+                        android:layout_margin="5dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:hint="Bu gün ile ilgili notlarınızı buraya girebilirsiniz..."
+                        android:textAlignment="textStart"
+                        android:textColor="@color/white1"
+                        android:textColorHint="@color/text9"
+                        android:backgroundTint="@color/transparent"
+                        android:textSize="27sp"/>
+                </LinearLayout>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btnDersCalis_kapat"
+                    android:layout_marginRight="20dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginTop="50dp"
+                    android:layout_marginBottom="50dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn2"
+                    android:textSize="30dp"
+                    android:textColor="@color/white1"
+                    android:padding="10dp"
+                    android:text="Bitir"/>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>

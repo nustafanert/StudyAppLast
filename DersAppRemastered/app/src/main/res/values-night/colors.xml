@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <color name="theme1color1">#b1e9a3</color>
+    <color name="theme1color2">#7ac38f</color>
+    <color name="theme1color3">#384744</color>
+    <color name="theme1color4">#AEC9D5</color>
+
+    <color name="theme2color1">#e2eff1</color>
+    <color name="theme2color2">#b6d5e1</color>
+    <color name="theme2color3">#65799b</color>
+    <color name="theme2color4">#555273</color>
+
+    <color name="theme3color1">#DFDFDF</color>
+    <color name="theme3color2">#B6B6B6</color>
+    <color name="theme3color3">#919191</color>
+    <color name="theme3color4">#6E6E6E</color>
+
+    <color name="theme4color1">#A4CCFF</color>
+    <color name="theme4color2">#5700FF</color>
+    <color name="theme4color3">#762FFF</color>
+    <color name="theme4color4">#4831D4</color>
+
+    <color name="theme5color1">#101820</color>
+    <color name="theme5color2">#FEE715</color>
+    <color name="theme5color3">#4831D4</color>
+    <color name="theme5color4">#A4CCFF</color>
+
+    <color name="theme6color1">#FFFFFF</color>
+    <color name="theme6color2">#202020</color>
+    <color name="theme6color3">#C06C84</color>
+    <color name="theme6color4">#6C5B7B</color>
+    <color name="theme6color5">#355C7D</color>
+    <color name="theme6color6">#505050</color>
+    <color name="theme6color7">#B1AEAE</color>
+    <color name="theme6color8">#454545</color>
+
+    <color name="a">#6E6E6E</color>
+
+    <color name="transparent">#00FFFFFF</color>
+
+    <color name="text1">#F1F1F1</color>
+    <color name="text2">#2B2B2B</color>
+    <color name="text3">#000000</color>
+    <color name="text4">#68FAFAFA</color>
+    <color name="text7">#BAFAFAFA</color>
+    <color name="text8">#68000000</color>
+    <color name="text9">#68000000</color>
+    <color name="text_hint">#8F404040</color>
+    <color name="red">#FF1100</color>
+    <color name="text5">#D5D0D0</color>
+    <color name="text6">#E3DDDD</color>
+
+    <color name="white2">#FBFBFB</color>
+    <color name="white1">#000000</color>
+
+    <color name="bg_btn_6_color">#8FA9BF</color>
+    <color name="bg_btn7_color">#7CB877</color>
+    <color name="bg_btn2_color">#FF0000</color>
+    <color name="black">#000000</color>
+    <color name="bg_arka3_color_end">#BCBCBC</color>
+    <color name="bg_arka3_color_start">#979797</color>
+    <color name="bg_btn4_color">#D3B6AC</color>
+    <color name="bg_alti_cizim1_color">#40BFBFBF</color>
+    <color name="horizontal_progressbar_back_color">#404040</color>
+    <color name="todolist_newmission_back_color">#AAAAAA</color>
+
+    <color name="whiteandblack">#000000</color>
+    <color name="blackandwhite">#FFFFFF</color>
+</resources>

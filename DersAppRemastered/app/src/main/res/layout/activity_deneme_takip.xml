@@ -1,0 +1,1145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/theme6color6"
+    tools:context=".ActivityDenemeTakip">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:drawableLeft="@drawable/timer"
+                    android:id="@+id/dersCalis_calisilan_sure"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="15dp"
+                    android:padding="10dp"
+                    android:text="Çalıştığın Süre : 0 dk"
+                    android:textAlignment="center"
+                    android:textColor="@color/white1"
+                    android:textSize="30sp" />
+                <TextView
+                    android:drawableLeft="@drawable/calisma"
+                    android:id="@+id/durum_toplamSoruSayi"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="15dp"
+                    android:padding="10dp"
+                    android:text="Çözülen Soru Sayısı : 0"
+                    android:textAlignment="center"
+                    android:textColor="@color/white1"
+                    android:textSize="30sp" />
+
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="3dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:background="@color/white1" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="Derslere Göre\nSoru Sayıları"
+                    android:textAlignment="center"
+                    android:textColor="#000000"
+                    android:textSize="25dp" />
+
+
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_matView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Matematik"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_matEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_matEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_matEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //aytmat
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_edbView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Edebiyat"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_edbEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_edbEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_edbEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt edb
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_tarih1View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Tarih-1"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_tarih1EditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tarih1EditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tarih1EditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt tarih1
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_cog1View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Coğrafya-1"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_cog1EditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_cog1EditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_cog1EditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt coğ1
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_tarih2View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Tarih-2"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_tarih2EditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tarih2EditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tarih2EditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt tarih 2
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_cog2View"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Coğrafya-2"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_cog2EditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_cog2EditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_cog2EditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt coğ2
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_felsefeView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Felsefe"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_felsefeEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_felsefeEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_felsefeEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt felsefe
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_dinView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Din"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_dinEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_dinEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_dinEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt din
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_tytmatView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Matematik"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_tytmatEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytmatEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytmatEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout>//tyt mat
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_tytfizikView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Fizik"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_tytfizikEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytfizikEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytfizikEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout>//tyt fizik
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_tytkimyaView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Kimya"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_tytkimyaEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytkimyaEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytkimyaEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout>//tyt kimya
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_tytbiyoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Biyoloji"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_tytbiyolojiEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytbiyolojiEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_tytbiyolojiEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout>//tyt biyo
+
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_fizikView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Fizik"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_fizikEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_fizikEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_fizikEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt fizik
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_kimyaView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Kimya"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_kimyaEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_kimyaEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_kimyaEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt kimya
+                <LinearLayout
+                    android:layout_margin="10dp"
+                    android:visibility="visible"
+                    android:id="@+id/deneme_biyoView"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/bg_btn4"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1.4"
+                        android:gravity="center"
+                        android:padding="5dp"
+                        android:text="Biyoloji"
+                        android:textColor="@color/text2"
+                        android:textSize="30sp" />
+
+                    <EditText
+                        android:id="@+id/deneme_biyolojiEditDogru"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="D"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_biyolojiEditYanlis"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="Y"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+                    <EditText
+                        android:id="@+id/deneme_biyolojiEditBos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="10dp"
+                        android:layout_marginRight="5dp"
+                        android:layout_weight="2"
+                        android:backgroundTint="@color/white1"
+                        android:hint="B"
+                        android:inputType="number"
+                        android:maxLength="2"
+                        android:textAlignment="center"
+                        android:textColor="@color/text3"
+                        android:textColorHint="@color/text_hint"
+                        android:textSize="40sp" />
+
+                </LinearLayout> //ayt biyo
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+    <LinearLayout
+        android:id="@+id/denemeTurSec"
+        android:visibility="gone"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:layout_alignParentLeft="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:layout_marginEnd="15dp"
+                android:layout_marginBottom="15dp"
+                android:background="@drawable/back"
+                android:onClick="Geri" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="12dp"
+                android:layout_marginEnd="12dp"
+                android:text="Deneme Tür"
+                android:textAlignment="center"
+                android:textColor="@color/white1"
+                android:textSize="35dp" />
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="3dp"
+            android:background="@color/white1"
+            android:layout_marginBottom="15dp"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/choose_tyt"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:text="TYT"
+            android:textSize="40sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/choose_say"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:text="AYT 'SAY'"
+            android:textSize="40sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/choose_ea"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:text="AYT 'EA'"
+            android:textSize="40sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/choose_soz"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:text="AYT 'SÖZ'"
+            android:textSize="40sp"/>
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/choose_ydt"
+            android:layout_margin="10dp"
+            android:padding="7dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/bg_btn1"
+            android:text="YDT"
+            android:textSize="40sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
